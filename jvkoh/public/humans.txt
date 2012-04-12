@@ -1,0 +1,19 @@
+/* TEAM */
+  Frontend:   vjsingh
+  GitHub:     User
+  Twitter:    -
+  Location:   -
+  
+  Backend:    vjsingh
+  GitHub:     User
+  Twitter:    -
+  Location:   -
+  
+  Mobile:     vjsingh
+  GitHub:     User
+  Twitter:    -
+  Location:   -
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: Tower, jQuery, Underscore.js

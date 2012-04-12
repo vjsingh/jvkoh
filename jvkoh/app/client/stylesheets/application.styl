@@ -1,0 +1,372 @@
+@font-face {
+  font-family: 'Sorts Mill Goudy';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Sorts Mill Goudy Italic'), local('SortsMillGoudy-Italic'), url('http://themes.googleusercontent.com/static/fonts/sortsmillgoudy/v3/UUu1lKiy4hRmBWk599VL1dvlBl0Jp7mnNhNNKZ7BGiU.woff') format('woff');
+}
+@font-face {
+  font-family: 'Sorts Mill Goudy';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Sorts Mill Goudy Regular'), local('SortsMillGoudy-Regular'), url('http://themes.googleusercontent.com/static/fonts/sortsmillgoudy/v3/JzRrPKdwEnE8F1TDmDLMUtsZ51dqzBwIdH2JuTl9mv4.woff') format('woff');
+}
+
+html, body
+  background url('/images/tex2res5.png')
+
+body
+  font-family 'Sorts Mill Goudy', "Georgia", Times New Roman, Times, serif
+  font-size 16px
+  font-weight normal
+  line-height 24px
+  color #404040
+  text-shadow 0 1px 0 #ffffff
+
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, cite, code, del, dfn, em, img, q, s, samp, small, strike, strong, sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, button, table, caption, tbody, tfoot, thead, tr, th, td
+  margin 0
+  padding 0
+  border 0
+  font-weight normal
+  font-style normal
+  font-size 100%
+  line-height 1
+  font-family inherit
+
+.container
+  position relative
+
+header
+  padding 25px 0px
+  background white
+  border-bottom 2px solid #BFBFBF
+  margin-bottom 40px
+
+header h1
+  background url('http://media.mike-robinson.ca/images/logo.png?79243b5dee16') left center no-repeat
+  color #404040
+  font-style italic
+  position relative
+  top 10px
+  padding-left 60px
+  line-height 50px
+
+header h1 em
+  color #BFBFBF
+
+.sidebar h2
+  font-size italic
+
+h1
+  margin-bottom 24px
+  font-size 30px
+  line-height 48px
+
+h2
+  font-size 24px
+  line-height 48px
+  margin-bottom 24px
+
+h1, h2, h3, h4, h5, h6
+  color #404040
+
+em
+  font-style italic
+  font-weight inherit
+  line-weight inherit
+
+.sidebar p
+  margin-right 10px
+
+p
+  font-size 16px
+  font-weight normal
+  line-height 24px
+  margin-bottom 24px
+
+
+
+nav
+  position absolute
+  top 20px
+  right 0
+
+nav ul
+  margin 0
+  padding 0
+
+ul
+  list-style disc
+
+ul.project-list
+  margin 0 0 60px
+  list-style none
+
+ul.project-list li
+  float left
+  margin-right 20px
+  width 200px
+  height 200px
+  text-align center
+
+a > img
+  height 150px
+  width 150px
+  margin-left 30px
+
+.hovergallery img
+  -webkit-transform scale(0.8)
+  -moz-transform scale(0.8)
+  -o-transform scale(0.8)
+  -webkit-transition-duration  0.5s
+  -moz-transition-duration  0.5s
+  -o-transition-duration  0.5s
+  opacity  0.7
+  margin  0 10px 5px 0
+
+.hovergallery img:hover
+  -webkit-transform scale(1.1)
+  -moz-transform scale(1.1)
+  -o-transform scale(1.1)
+  box-shadow 0px 0px 30px gray
+  -webkit-box-shadow 0px 0px 30px gray
+  -moz-box-shadow 0px 0px 30px gray
+  opacity 1
+
+.songTitle
+  padding-top: 10px
+  color: black
+  vertical-align bottom
+
+.music-list
+
+.songTitle span
+
+nav ul li
+  list-style none
+  float left
+  margin-left 30px
+
+nav ul li a
+  line-height 1
+  color black
+  text-transform uppercase
+  font-size 14px
+  display block
+  -webkit-transition all 0.3s linear
+  -moz-transition all 0.3s linear
+  -ms-transition all 0.3s linear
+  -o-transition all 0.3s linear
+  transition all 0.3s linear
+  padding-bottom 12px
+  border-bottom 3px solid white
+
+nav ul li a span
+  display block
+  margin 0
+  color #BFBFBF
+  font-size 11px
+
+nav ul li a:hover, nav ul li a.active
+  color #black
+  padding-bottom 12px
+  border-bottom-color #CCC
+  text-decoration none
+
+nav ul li a.active
+  border-bottom-color #404040
+
+
+li
+  line-height 24px
+  color #4D4D4D
+
+#main
+  border-bottom 1px solid #BFBFBF
+  margin-bottom 0
+
+.page-header
+  margin 0 0 23px
+  border-bottom 1px solid #BFBFBF
+  -webkit-box-shadow 0 1px 0 rgba(255, 255, 255, 0.75)
+  -moz-box-shadow 0 1px 0 rgba(255, 255, 255, 0.75)
+  box-shadow 0 1px 0 rgba(255, 255, 255, 0.75)
+
+  padding-bottom 0px
+
+.page-header h1
+  margin-bottom 11px
+  line-height 48px
+
+footer
+  padding 20px 0
+  margin-top 0
+  border-top 1px solid white
+
+footer ul
+  margin 10px 0
+  zoom 1
+
+footer ul li:first-child
+  margin-left 0
+  list-style none
+
+footer ul li
+  float left
+  margin-right 10px
+  padding-right 20px
+
+.sidebar figure
+  width auto
+  padding 0
+  margin 0
+  display block
+
+.sidebar figure img
+  border 10px solid white
+  -webkit-box-shadow 0 0 4px rgba(0, 0, 0, 0.4)
+  -moz-box-shadow 0 0 4px rgba(0, 0, 0, 0.4)
+  box-shadow 0 0 4px rgba(0, 0, 0, 0.4)
+
+
+
+
+@media screen and (max-width: 1000px) and (min-width: 400px) {
+  .container {
+    width: 95%;
+  }
+  header {
+    padding: 10px 0;
+  }
+  header h1 {
+    width: 200px;
+    margin: 10px auto 30px;
+  }
+  header nav {
+    position: static;
+    margin: 10px auto;
+    width: 400px;
+  }
+  footer ul li {
+    margin-right: 5px;
+    padding-right: 15px;
+  }
+  .about .row {
+    margin-left: 0;
+  }
+  .about .sidebar {
+    float: right;
+  }
+  .about .sidebar figure {
+    margin-bottom: 20px;
+  }
+  .about .span12 {
+    float: none;
+  }
+  .work .sidebar {
+    width: 100%;
+  }
+  .work .sidebar h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+  .work .sidebar p {
+    text-align: center;
+  }
+  .work .span12 {
+    width: 100%;
+  }
+  .work ul.project-list li {
+    margin-right: 10px;
+  }
+  .project-detail .span4 {
+    float: right;
+    margin-left: 20px;
+  }
+  .project-detail .span12 {
+    width: 100%;
+    float: none;
+  }
+  .project-detail .row {
+    margin-left: 0;
+  }
+}
+
+
+@media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 500px) {
+  .container {
+    width: 95%;
+  }
+  body {
+    font-size: 16px;
+  }
+  header {
+    padding: 10px 0;
+  }
+  header h1 {
+    width: 200px;
+    margin: 10px auto 30px;
+  }
+  header nav {
+    position: static;
+    margin: 10px auto;
+    width: 100%;
+  }
+  header nav ul {
+    padding: 0;
+  }
+  header nav ul li {
+    float: none;
+    width: 100%;
+    padding: 0;
+    margin: 0 0 10px;
+  }
+  header nav ul li a {
+    font-size: 20px;
+    border-bottom: 3px solid #bfbfbf;
+    padding: 12px 0;
+  }
+  header nav ul li a span {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  footer ul li {
+    float: none;
+    list-style: disc;
+    padding-left: 5px;
+    padding: 10px 0 5px;
+    margin-left: 25px;
+  }
+  .about figure {
+    display: none;
+  }
+  .span12, .span4 {
+    width: 100%;
+    float: none;
+  }
+  .row {
+    margin-left: 0;
+  }
+  h1 small, h2 small, h3 small {
+    display: block;
+  }
+  ul.project-list li {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  ul.project-list li a img {
+    display: block;
+    margin: 5px auto;
+  }
+  .project-detail ul.slide-list li img {
+    display: block;
+    margin: 10px auto;
+  }
+  .project-detail dd {
+    width: 500px;
+  }
+  .project-detail .next-prev {
+    display: none;
+  }
+}
