@@ -39,7 +39,6 @@ header
   padding 25px 0px
   background white
   border-bottom 2px solid #BFBFBF
-  margin-bottom 40px
 
 header h1
   background url('http://media.mike-robinson.ca/images/logo.png?79243b5dee16') left center no-repeat
@@ -52,6 +51,217 @@ header h1
 
 header h1 em
   color #BFBFBF
+
+#jplayerBar
+  width 100%
+  height 45px
+  margin-bottom 40px
+  background transparent url('/images/bg_player.jpg') repeat-x scroll 0 0
+
+.jp-interface
+    position relative
+    width 940px
+    height 45px
+
+.jp-progress
+    position absolute
+    left 285px
+    bottom 10px
+
+.jp-progress,.jp-seek-bar,.jp-play-bar
+    background #fff
+    width 350px
+    height 10px
+    cursor pointer
+
+.jp-progress
+    background #ddd
+
+.jp-play-bar
+    background-color #93edee
+
+.jp-current-time, .jp-duration
+    position absolute
+    height 10px
+    width 25px
+    font-size 11px
+
+.jp-current-time
+    left -40px
+    bottom 12px
+
+.jp-duration
+    left 360px
+    bottom 12px
+
+.jp-title
+    position absolute
+    left 285px
+    top 3px
+    height 11px
+    width 350px
+    display block !important
+
+.jp-title ul
+    list-style-type none
+    margin 0
+    padding 0
+    width 350px
+    height: 11px
+
+.jp-title li
+    margin 0
+    padding 0
+    font-size 11px
+    width 350px
+    height 20px
+
+.jp-toggles
+    position absolute
+    left 375px
+    top -35px
+    height 45px
+
+.jp-toggles li
+    display block
+    width 15px
+    height 15px
+    float left
+
+
+.jp-toggles li a.jp-shuffle-off
+,.jp-toggles li a.jp-shuffle
+,.jp-toggles li a.jp-repeat
+,.jp-toggles li a.jp-repeat-off
+    position absolute
+    top 0
+    left 0
+    display block
+    height 45px
+    width 15px
+    background transparent url(http://www.mountainmusiclounge.com/uploads/mml/images/bg_controls.jpg) no-repeat scroll -284px 0
+    text-indent -9999em
+
+.jp-toggles li a.jp-shuffle-off
+    background-position -284px -45px
+
+.jp-toggles li a.jp-repeat
+,.jp-toggles li a.jp-repeat-off
+    position absolute
+    top 0
+    left 20px
+    background-position -263px 0
+
+.jp-toggles li a.jp-repeat-off
+    background-position -263px -45px
+
+
+// get this out of the way for now
+// .jp-progress,.jp-current-time,.jp-title,.jp-duration,.jp-toggles position absolute left -555px
+// .jp-playlist display none
+// .jp-controls-holder width 250pxposition absolute left 0 top 0 z-index 50height 45px background green
+
+.jp-controls, .jp-toggles
+    list-style-type none
+    margin 0
+    padding 0
+    position relative
+
+.jp-controls li,
+,.jp-toggles li
+    margin 0
+    padding 0
+
+.jp-controls li a
+    margin 0
+    padding 0
+    position absolute
+    top 0
+    left 0
+    height 45px
+    display block
+    text-indent -9999em
+    overflow hidden
+    background transparent url(http://www.mountainmusiclounge.com/uploads/mml/images/bg_controls.jpg) no-repeat scroll 0 0
+
+.jp-controls li a:hover
+    text-decoration none
+
+.jp-controls li a.jp-previous
+    width 14px
+    left 0px
+    background-position 0 0
+
+.jp-controls a.jp-previous:hover
+    background-position 0 -45px
+
+.jp-controls a.jp-play,
+.jp-controls a.jp-pause
+    left 20px
+    width 30px
+    background-position -20px 0
+
+.jp-controls a.jp-pause
+    background-position -80px 0
+
+.jp-controls a.jp-pause:hover
+    background-position -80px -45px
+
+.jp-controls a.jp-play:hover
+    background-position -20px -45px
+
+.jp-controls a.jp-next
+    width 14px
+    left 56px
+    background-position -56px 0
+
+.jp-controls a.jp-next:hover
+    background-position: -56px -45px
+
+.jp-controls a.jp-stop {
+    left 81px
+    width 15px
+    background-position -118px 0
+}
+.jp-controls a.jp-stop:hover
+    background-position -118px -45px
+
+.jp-controls a.jp-mute,
+.jp-controls a.jp-unmute
+    left 111px
+    width 15px
+    background-position -146px 0
+
+.jp-controls a.jp-mute:hover,
+.jp-controls a.jp-unmute
+    background-position -146px -45px
+
+.jp-controls a.jp-volume-max
+    left 184px
+    width 18px
+    background-position -233px 0
+
+.jp-controls a.jp-volume-max:hover
+    background-position -233px -45px
+
+.jp-volume-bar
+    height 8px
+    width 53px
+    background #fff
+    position absolute
+    left -155px
+    top -6px
+
+.jp-volume-bar-value
+    background-color #93edee
+    position relative
+    width 53px
+    height 8px
+    cursor poiner
+
+.jp-volume-bar-value:hover
+    cursor pointer
+
 
 .sidebar h2
   font-size italic

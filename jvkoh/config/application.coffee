@@ -1,3 +1,7 @@
+if process.env.NODE_ENV == 'production'
+  Tower.Application::watch = ->
+  Tower.env = 'production'
+
 class App extends Tower.Application
   @configure ->
     @use "favicon", Tower.publicPath + "/favicon.png"
@@ -14,7 +18,7 @@ class App extends Tower.Application
     @use Tower.Middleware.Location
     #if Tower.httpCredentials && Tower.branch != "development"
     #  @use "basicAuth", Tower.httpCredentials.username, Tower.httpCredentials.password
-    
+
     @use Tower.Middleware.Router
 
 module.exports = global.App = new App

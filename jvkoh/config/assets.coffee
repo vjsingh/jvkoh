@@ -2,7 +2,6 @@ module.exports =
   javascripts:
     application: [
       "/app/client/config/application"
-      "/app/client/config/lib/jquery.jplayer"
       "/config/routes"
       "/app/views/templates"
       "/app/models/post"
@@ -10,7 +9,7 @@ module.exports =
     ]
 
     lib: [
-
+      "/lib/javascripts/jquery.jplayer.min"
     ]
 
     vendor: [
@@ -52,11 +51,11 @@ module.exports =
   stylesheets:
     application: [
       "/app/client/stylesheets/application"
-      "/app/client/stylesheets/jplayer.blue.monday"
+      #"/app/client/stylesheets/jplayer.blue.monday"
     ]
 
     lib: [
-
+      #'/lib/stylesheets/blue.monday/jplayer.blue.monday'
     ]
 
     vendor: [
