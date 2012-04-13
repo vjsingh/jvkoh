@@ -10,12 +10,26 @@ class App extends Tower.Application
 window.App = (new App).initialize()
 
 $(document).ready(() ->
-  $("#jquery_jplayer_1").jPlayer( {
+  setTitle = (title) ->
+    $('#jp-title-text').html(title)
+  jPlayerDiv = $("#jquery_jplayer_1")
+  jPlayerDiv.jPlayer( {
     ready: () ->
       $(this).jPlayer("setMedia", {
         mp3: "/music/mozart.mp3"
       })
+      setTitle('Mozart')
     supplied: 'mp3'
     wmode: 'window'
   })
+
+  $('.playableSong').click((e) ->
+    songUrl = $(this).attr('url')
+    songTitle = $(this).attr('title')
+    console.log(songUrl)
+    jPlayerDiv.jPlayer("setMedia", {
+      mp3: songUrl
+    }).jPlayer('play')
+    setTitle(songTitle)
+  )
 )

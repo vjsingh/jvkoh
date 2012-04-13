@@ -71,7 +71,7 @@ html ->
               </div>
               <div class="jp-title">
                 <ul>
-                  <li>Cro Magnon Man</li>
+                  <li id="jp-title-text">Cro Magnon Man</li>
                 </ul>
               </div>
               <div class="jp-no-solution">

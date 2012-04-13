@@ -11,7 +11,7 @@ div class: "container", ->
           small "A selection of past works"
         ul class: 'project-list', ->
           for song in @homepageMusic
-            li -> a class: 'hovergallery', href: '/asdf/', ->
+            li -> a class: 'playableSong hovergallery', href: 'Javascript:void()', url: song.url, title: song.title, ->
               img src: song.img, title: song.alt
               div class: 'songTitle', ->
                 text song.title

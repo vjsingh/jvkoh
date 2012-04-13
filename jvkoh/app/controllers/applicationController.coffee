@@ -69,7 +69,7 @@ class App.ApplicationController extends Tower.Controller
     for song in songs
       shortTitle = makeShortTitle(song.title)
       #song.url = '/music/' + shortTitle + '.mp3' if !song.url
-      song.url = '/music/mozart.mp3' if !song.url
+      song.url = 'https://s3.amazonaws.com/jvkoh-music/' + shortTitle + '.mp3' if !song.url
       song.alt = song.title if !song.alt
 
   index: ->
