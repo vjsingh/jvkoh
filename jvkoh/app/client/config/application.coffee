@@ -26,7 +26,6 @@ $(document).ready(() ->
   $('.playableSong').click((e) ->
     songUrl = $(this).attr('url')
     songTitle = $(this).attr('title')
-    console.log(songUrl)
     jPlayerDiv.jPlayer("setMedia", {
       mp3: songUrl
     }).jPlayer('play')
