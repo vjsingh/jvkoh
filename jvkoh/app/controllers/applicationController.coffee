@@ -9,7 +9,6 @@ class App.ApplicationController extends Tower.Controller
     allAroundTheWorld =
         title: 'All Around The World'
         alt: 'Theopilius London Remix for his contest'
-        soundcloud: 'http://snd.sc/HylTLr'
     floatInTheOcean  =
         title: 'Float In The Ocean'
         img: '/images/floatintheocean.jpg'
@@ -70,6 +69,11 @@ class App.ApplicationController extends Tower.Controller
       shortTitle = makeShortTitle(song.title)
       #song.url = '/music/' + shortTitle + '.mp3' if !song.url
       song.url = 'https://s3.amazonaws.com/jvkoh-music/' + shortTitle + '.mp3' if !song.url
+
+      # Default to shortTitle
+      #song.soundCloudUrl = shortTitle if !song.soundCloudUrl
+      #song.soundCloudUrl = 'http://www.soundcloud.com/jvkoh/' + song.soundCloudUrl
+
       song.alt = song.title if !song.alt
 
   index: ->

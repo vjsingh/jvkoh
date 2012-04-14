@@ -12,6 +12,10 @@ window.App = (new App).initialize()
 $(document).ready(() ->
   setTitle = (title) ->
     $('#jp-title-text').html(title)
+  #setSoundCloudLink = (url) ->
+    #$('#soundcloudLink').html(
+    #'<a href="' + url + '"> <img src="/images/soundcloud.png"> </a>'
+    #)
   jPlayerDiv = $("#jquery_jplayer_1")
   jPlayerDiv.jPlayer( {
     ready: () ->
@@ -26,10 +30,12 @@ $(document).ready(() ->
   $('.playableSong').click((e) ->
     songUrl = $(this).attr('url')
     songTitle = $(this).attr('title')
+    #soundCloudUrl = $(this).attr('soundCloudUrl')
     console.log(songUrl)
     jPlayerDiv.jPlayer("setMedia", {
       mp3: songUrl
     }).jPlayer('play')
     setTitle(songTitle)
+    #setSoundCloudLink(soundCloudUrl)
   )
 )
