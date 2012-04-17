@@ -101,6 +101,13 @@ $(document).ready(() ->
     else if (e.keyCode == 37)  #left
       goLeft()
   )
+  $('#rightArrow').click((e) ->
+    console.log("AAA")
+    goRight()
+  )
+  $('#leftArrow').click((e) ->
+    goLeft()
+  )
   # Make tabs active when clicked
   navbarLinks = $(".navButton")
   inTransition = false
