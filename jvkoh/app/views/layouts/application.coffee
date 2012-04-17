@@ -5,6 +5,8 @@ html ->
     #stylesheets 'lib', 'vendor', 'application'
 
   body role: "application", ->
+    img class: 'arrowKey', id: 'rightArrow', src:'/images/right.png'
+    img id: 'leftArrow', class: 'arrowKey', src:'/images/left.png'
     #if browserIs "ie"
     #  javascriptTag "http://html5shiv.googlecode.com/svn/trunk/html5.js"
 

@@ -64,7 +64,6 @@ class App.ApplicationController extends Tower.Controller
   addedSongs = {}
   addSongInfo = (songs) ->
     for song in songs
-      console.log(addedSongs[song], song)
       if !addedSongs[song.title]
         addedSongs[song.title] = true
         shortTitle = makeShortTitle(song.title)

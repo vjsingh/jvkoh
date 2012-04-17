@@ -71,34 +71,52 @@ $(document).ready(() ->
   # or set it before hand
   p.last = p.homepage
 
+  numPages = pages.length
+  hideArrowKeys = () ->
+    $('.arrowKey').show()
+    console.log(getCurrentPageIndex())
+    if getCurrentPageIndex() == 0
+      $('#leftArrow').hide()
+    else if getCurrentPageIndex() == (numPages - 1)
+      $('#rightArrow').hide()
+  hideArrowKeys()
+  goRight = () ->
+    # if not at the far right
+    if getCurrentPageIndex() < (numPages - 1)
+      nextPage = pages[getCurrentPageIndex() + 1]
+      #p[nextPage].right()
+      console.log(nextPage)
+      $('#' + nextPage).click()
+  goLeft = () ->
+    # if not at the far left
+    if getCurrentPageIndex() > 0
+      nextPage = pages[getCurrentPageIndex() - 1]
+      $('#' + nextPage).click()
+
   # Arrow key navigation
   # 37 - left, 38 - top, 39 - right, 40 - bottom
   $(document).keydown((e) ->
     if (e.keyCode == 39)  #right
-      # if not at the far right
-      len = pages.length - 1
-      if getCurrentPageIndex() < len
-        nextPage = pages[getCurrentPageIndex() + 1]
-        #p[nextPage].right()
-        console.log(nextPage)
-        $('#' + nextPage).click()
-
+      goRight()
     else if (e.keyCode == 37)  #left
-      # if not at the far left
-      if getCurrentPageIndex() > 0
-        nextPage = pages[getCurrentPageIndex() - 1]
-        $('#' + nextPage).click()
+      goLeft()
   )
   # Make tabs active when clicked
   navbarLinks = $(".navButton")
   inTransition = false
   transitionFinished = () ->
+    hideArrowKeys()
     inTransition = false
+    $('body').removeClass('hideOverflow')
 
   selectOnClick = (navLink) ->
     navLink.click((e) ->
       if (!inTransition)
         inTransition = true
+
+        # There's some weird flickering going on b/c
+        # of parallax, this fixes that
+        $('body').addClass('hideOverflow')
         # deselect all others
         navLink.parent().parent().children().removeClass('active')
         # Select this one
