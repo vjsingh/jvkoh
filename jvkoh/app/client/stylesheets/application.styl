@@ -15,6 +15,7 @@ html, body
   background url('/images/tex2res5.png')
 
 body
+  overflow: hidden
   font-family 'Sorts Mill Goudy', "Georgia", Times New Roman, Times, serif
   font-size 16px
   font-weight normal
@@ -36,7 +37,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, cite, cod
   position relative
 
 header
-  padding 25px 0px
+  padding 20px 0px
   background white
   border-bottom 2px solid #BFBFBF
 
@@ -57,6 +58,12 @@ header h1 em
   height 45px
   margin-bottom 40px
   background transparent url('/images/bg_player.jpg') repeat-x scroll 0 0
+
+// Center jplayer
+.jp-type-single
+  width 740px
+  margin-left auto
+  margin-right auto
 
 .jp-interface
     position relative
@@ -263,6 +270,9 @@ header h1 em
     cursor pointer
 
 
+#content
+  padding-top 15px
+
 .sidebar h2
   font-size italic
 
@@ -318,12 +328,10 @@ ul.project-list li
   height 200px
   text-align center
 
-a > img
+.hovergallery img
   height 150px
   width 150px
   margin-left 30px
-
-.hovergallery img
   -webkit-transform scale(0.8)
   -moz-transform scale(0.8)
   -o-transform scale(0.8)
@@ -415,6 +423,9 @@ footer
 footer ul
   margin 10px 0
   zoom 1
+  width 743px
+  margin-left auto
+  margin-right auto
 
 footer ul li:first-child
   margin-left 0

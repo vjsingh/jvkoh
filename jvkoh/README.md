@@ -5,33 +5,29 @@
 First [setup the Tower.js development environment](http://towerjs.org/guides/development#environment), then run:
 
 ```
-git clone git@github.com:User/jvkoh.git
+git clone git@github.com:vjsingh/jvkoh.git
 cd jvkoh
 npm install
 node server
-```
 
-## Test
+yooooooo heres what you need
+to test stuff locally if youre making changes, in jvkoh: 'node server.js'
+then open localhost:3000 in a browser
 
-Run tests:
+app/controllers/applicationController.coffee
+basically everything you need is in the constructor at the top. It should be pretty self explanatory. empty soundcloudUrl means theres no soundcloud page.
+soundcloud urls and music files default to the title made all lowercase with all the spaces removed. music files are stored on amazon s3
 
-```
-npm test
-```
+app/client/config/application.coffee
+This is where the javascript for your page is
 
-Read up on [testing Tower.js apps](http://towerjs.org/guides/testing).
+app/views/welcome.coffee / app/views/about.coffee / app/views/music.coffee
+the home, about, and music pages
 
-## Deploy
+app/views/layouts/application.coffee
+the layout (top and bottom thats on every page)
 
-Read [How to deploy Tower Apps to Heroku](http://towerjs.org/guides/deployment#heroku).
+app/client/stylesheets/application.styl
+  all the css
 
-## Documentation
-
-- [Tower.js](http://towerjs.org/guides)
-- [MongoDB](http://www.mongodb.org/display/DOCS/Advanced+Queries)
-- [Node.js](http://nodejs.org/docs/v0.6.11/api/fs.html)
-- [Mocha](https://github.com/visionmedia/mocha)
-- [CoffeeScript](http://coffeescript.org/)
-- [Stylus](http://learnboost.github.com/stylus/)
-
-If all else fails, see the [Rails Guides](http://guides.rubyonrails.org/), should be fairly close.
+./deploy deploys it live

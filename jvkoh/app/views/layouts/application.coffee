@@ -25,13 +25,13 @@ html ->
           em "Koh"
         nav ->
           ul ->
-            li -> a href: '/', ->
+            li -> a id: 'home', class: 'navButton', href: '#home', ->
               text 'Home'
               span "Music Highlights"
-            li -> a href: '/allMusic', ->
+            li -> a id: 'music', class: 'navButton', href: '#music', ->
               text 'Music'
               span "Everything"
-            li -> a href: '/about', ->
+            li -> a id: 'about', class: 'navButton', href: '#about', ->
               text 'About'
               span "My Background"
 
@@ -74,13 +74,16 @@ html ->
                   <li id="jp-title-text">Cro Magnon Man</li>
                 </ul>
               </div>
-              <div class="jp-no-solution">
-                <span>Update Required</span>
-                To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+              <div id="jp-no-solution-wrapper">
+                <div class="jp-no-solution">
+                  <span>Update Required</span>
+                  To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                </div>
               </div>
             </div>
           </div>
       '''
+    div id: "soundCloudLink"
     section id: "content", role: "main", ->
       div class: "container", ->
         yields "body"

@@ -13,6 +13,7 @@ module.exports =
     ]
 
     vendor: [
+      "/lib/javascripts/parallax"
       "/vendor/javascripts/underscore"
       "/vendor/javascripts/underscore.string"
       "/vendor/javascripts/moment"

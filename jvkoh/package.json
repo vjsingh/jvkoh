@@ -1,7 +1,7 @@
 {
   "name": "jvkoh",
   "private": true,
-  "version": "0.0.1-18",
+  "version": "0.0.1-29",
   "description": "",
   "homepage": "http://User.github.com/jvkoh",
   "main": "./server.js",
@@ -61,5 +61,9 @@
     "prepublish": "npm prune; rm -rf node_modules/*/{test,example,bench}*",
     "start": "server.js"
   },
-  "subdomain": "jvkoh"
+  "subdomain": "jvkoh",
+  "domains": [
+    "jvkoh.com",
+    "www.jvkoh.com"
+  ]
 }
