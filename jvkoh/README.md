@@ -15,14 +15,14 @@ to test stuff locally if youre making changes, in jvkoh: 'node server.js'
 then open localhost:3000 in a browser
 
 app/controllers/applicationController.coffee
-basically everything you need is in the constructor at the top. It should be pretty self explanatory. empty soundcloudUrl means theres no soundcloud page.
-soundcloud urls and music files default to the title made all lowercase with all the spaces removed. music files are stored on amazon s3
+basically everything you need is in the constructor at the top. It should be pretty self explanatory. soundcloudUrl = '' means theres no soundcloud page with that song
+soundcloud urls and music files default to the title made all lowercase with all the spaces removed, but you can override that by setting it. music files are stored on amazon s3, ill transfer them over to you
 
 app/client/config/application.coffee
-This is where the javascript for your page is
+client-side javascript
 
-app/views/welcome.coffee / app/views/about.coffee / app/views/music.coffee
-the home, about, and music pages
+app/views/welcome.coffee
+All the pages are in here
 
 app/views/layouts/application.coffee
 the layout (top and bottom thats on every page)
@@ -30,4 +30,4 @@ the layout (top and bottom thats on every page)
 app/client/stylesheets/application.styl
   all the css
 
-./deploy deploys it live
+./deployLive sends it to the server

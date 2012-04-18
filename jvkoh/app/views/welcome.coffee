@@ -54,13 +54,13 @@ div id: 'bodyWrapper', ->
           p "I am primarily a guitarist, but also a very competent bassist and drummer having played each for 10, 8, and 6 years respectively.  While I don't get to consistently practice drums at school I find that as all the more incentive to practice at home.  At school that time void can be easily filled with work on electronic music composition."
           p ->
             text "My experience working in music thus far has been very well rounded.  Whether it's playing jazz guitar for a private party on new years eve, lending a hand around the studio at ", ->
-            a href: 'http//www.wellspringsound.com/', 'Wellspring Sound'
+            a href: 'http://www.wellspringsound.com/', target: '_blank', 'Wellspring Sound'
             text ", teaching guitar in the Greater Boston Area, or even playing bass for the rock band "
-            a href: 'http://www.myspace.com/whatsyourmoniker', 'Moniker',
+            a href: 'http://www.myspace.com/whatsyourmoniker', target: '_blank', 'Moniker',
             text ", I always seem to have a good time."
 
           p ->
             text "In addition to guitar lessons, this coming summer I will be offering my "
-            a href: 'http://jvkoh.tumblr.com/post/2808658080/mini-studio', 'mini-studio'
+            a href: 'http://jvkoh.tumblr.com/post/2808658080/mini-studio', target: '_blank', 'mini-studio'
             text "for use recording low-budget demos, primarily aimed at high school students looking to make a portfolio for their college applications.  If you are interested in working in my mini-studio please take a minute to visit my tumblr page as I use it exclusively to post my music, most of which are samples created in said studio."
           p "If you would like to collaborate with me musically please do not hesitate to send me an email, I'm always looking for more ways to make music."
