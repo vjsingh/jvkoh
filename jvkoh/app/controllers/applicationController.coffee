@@ -9,11 +9,11 @@ class App.ApplicationController extends Tower.Controller
     allAroundTheWorld =
         title: 'All Around The World'
         alt: 'Theopilius London Remix for his contest'
-        soundCloudUrl: 'all-around-the-world'
+        soundCloudTitle: 'all-around-the-world'
     floatInTheOcean  =
         title: 'Float In The Ocean'
         img: '/images/floatintheocean.jpg'
-        soundCloudUrl: ''
+        soundCloudTitle: ''
     mozart  =
         title: 'Mozart'
         img: '/images/mozart.gif'
@@ -22,7 +22,7 @@ class App.ApplicationController extends Tower.Controller
         img: '/images/heartbreaker.jpg'
     beatboxjam  =
         title: 'Beat Box Jam'
-        soundCloudUrl: 'beat-box-jam'
+        soundCloudTitle: 'beat-box-jam'
     venus  =
         title: 'Venus'
         img: '/images/venus.jpg'
@@ -61,22 +61,26 @@ class App.ApplicationController extends Tower.Controller
       shortTitle = makeShortTitle(song.title)
       song.img = '/images/' + shortTitle + '.jpeg' if ! song.img
 
-  addedSongs = {}
+  #addedSongs = {}
   addSongInfo = (songs) ->
     for song in songs
-      if !addedSongs[song.title]
-        addedSongs[song.title] = true
-        shortTitle = makeShortTitle(song.title)
-        #song.url = '/music/' + shortTitle + '.mp3' if !song.url
-        song.url = 'https://s3.amazonaws.com/jvkoh-music/' + shortTitle + '.mp3' if !song.url
+      #if !addedSongs[song.title]
+      #addedSongs[song.title] = true
+      shortTitle = makeShortTitle(song.title)
+      #song.url = '/music/' + shortTitle + '.mp3' if !song.url
+      song.url = 'https://s3.amazonaws.com/jvkoh-music/' + shortTitle + '.mp3' if !song.url
 
-        # empty means no soundcloud
-        if song.soundCloudUrl != ''
+      # empty means no soundcloud
+      # Don't set twice
+      if song.soundCloudUrl != '' and not song.soundCloudUrl
+        if song.soundCloudTitle
+          song.soundCloudUrl = song.soundCloudTitle
+        else
           #Default to shortTitle
           song.soundCloudUrl = shortTitle if !song.soundCloudUrl
-          song.soundCloudUrl = 'http://www.soundcloud.com/jvkoh/' + song.soundCloudUrl
+        song.soundCloudUrl = 'http://www.soundcloud.com/jvkoh/' + song.soundCloudUrl
 
-        song.alt = song.title if !song.alt
+      song.alt = song.title if !song.alt
 
   index: ->
     @render 'welcome', locals:

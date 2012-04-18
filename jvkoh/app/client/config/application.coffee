@@ -11,7 +11,6 @@ window.App = (new App).initialize()
 
 $(document).ready(() ->
   $('#jp-no-solution-wrapper').hide()
-  console.log("AAA")
   setTitle = (title) ->
     $('#jp-title-text').html(title)
   setSoundCloudLink = (url) ->
@@ -74,7 +73,6 @@ $(document).ready(() ->
   numPages = pages.length
   hideArrowKeys = () ->
     $('.arrowKey').show()
-    console.log(getCurrentPageIndex())
     if getCurrentPageIndex() == 0
       $('#leftArrow').hide()
     else if getCurrentPageIndex() == (numPages - 1)
@@ -85,7 +83,6 @@ $(document).ready(() ->
     if getCurrentPageIndex() < (numPages - 1)
       nextPage = pages[getCurrentPageIndex() + 1]
       #p[nextPage].right()
-      console.log(nextPage)
       $('#' + nextPage).click()
   goLeft = () ->
     # if not at the far left
@@ -102,7 +99,6 @@ $(document).ready(() ->
       goLeft()
   )
   $('#rightArrow').click((e) ->
-    console.log("AAA")
     goRight()
   )
   $('#leftArrow').click((e) ->
